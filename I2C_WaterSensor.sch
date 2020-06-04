@@ -4,12 +4,12 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 4
+Sheet 7 7
 Title "I2C frequency sensor"
 Date ""
 Rev "1"
-Comp ""
-Comment1 "Designed for OSH Park 2 Layer Prototype"
+Comp "RWTH Aachen University, Physik 3B"
+Comment1 ""
 Comment2 ""
 Comment3 ""
 Comment4 ""
@@ -95,10 +95,6 @@ Wire Wire Line
 Wire Wire Line
 	8000 1800 7500 1800
 Wire Wire Line
-	8000 1900 7500 1900
-Wire Wire Line
-	8000 2000 7500 2000
-Wire Wire Line
 	8000 2100 7500 2100
 Wire Wire Line
 	8000 2200 7500 2200
@@ -145,19 +141,6 @@ Text Label 7850 5750 0    50   ~ 0
 SCK
 Text Label 7850 5850 0    50   ~ 0
 RESET
-Wire Wire Line
-	6500 4800 6000 4800
-$Comp
-L power:GND #PWR01
-U 1 1 5E7A415B
-P 6050 5400
-F 0 "#PWR01" H 6050 5150 50  0001 C CNN
-F 1 "GND" H 6055 5227 50  0000 C CNN
-F 2 "" H 6050 5400 50  0001 C CNN
-F 3 "" H 6050 5400 50  0001 C CNN
-	1    6050 5400
-	1    0    0    -1  
-$EndComp
 $Comp
 L power:GND #PWR03
 U 1 1 5E7A5C8F
@@ -439,4 +422,225 @@ Wire Wire Line
 	5850 3200 5850 2850
 Connection ~ 5550 3200
 Connection ~ 5850 2850
+Text Label 7550 2700 0    50   ~ 0
+ADC0
+Text Label 7550 2800 0    50   ~ 0
+ADC1
+Text Label 7550 2900 0    50   ~ 0
+ADC2
+Text Label 7550 3000 0    50   ~ 0
+ADC3
+$Comp
+L Connector_Generic:Conn_01x07 J8
+U 1 1 5ED68C1D
+P 1050 6850
+F 0 "J8" H 968 7367 50  0000 C CNN
+F 1 "Conn_01x07" H 968 7276 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x07_P2.54mm_Vertical" H 1050 6850 50  0001 C CNN
+F 3 "~" H 1050 6850 50  0001 C CNN
+	1    1050 6850
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	1750 6650 1250 6650
+Wire Wire Line
+	1750 6750 1250 6750
+Wire Wire Line
+	1750 6850 1250 6850
+Wire Wire Line
+	1750 7050 1250 7050
+Wire Wire Line
+	1750 7150 1250 7150
+Text Label 2350 6550 0    50   ~ 0
+RXD
+Text Label 1400 6650 0    50   ~ 0
+TXD
+Text Label 1400 6750 0    50   ~ 0
+GND
+Text Label 1400 6850 0    50   ~ 0
+25um
+Text Label 1400 6950 0    50   ~ 0
++5V
+Text Label 1400 7050 0    50   ~ 0
+1um
+Text Label 1400 7150 0    50   ~ 0
+NC
+Text Notes 650  6250 0    50   ~ 0
+Connection to SDS011
+$Comp
+L Device:R R6
+U 1 1 5ED771A2
+P 2150 6550
+F 0 "R6" V 1943 6550 50  0000 C CNN
+F 1 "1k" V 2034 6550 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 2080 6550 50  0001 C CNN
+F 3 "~" H 2150 6550 50  0001 C CNN
+	1    2150 6550
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R7
+U 1 1 5ED783E0
+P 2500 6750
+F 0 "R7" H 2570 6796 50  0000 L CNN
+F 1 "2k2" H 2570 6705 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 2430 6750 50  0001 C CNN
+F 3 "~" H 2500 6750 50  0001 C CNN
+	1    2500 6750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2300 6550 2500 6550
+Wire Wire Line
+	2500 6550 2500 6600
+$Comp
+L power:GND #PWR039
+U 1 1 5ED7CF1F
+P 2500 6950
+F 0 "#PWR039" H 2500 6700 50  0001 C CNN
+F 1 "GND" H 2505 6777 50  0000 C CNN
+F 2 "" H 2500 6950 50  0001 C CNN
+F 3 "" H 2500 6950 50  0001 C CNN
+	1    2500 6950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1950 6950 1950 6900
+Wire Wire Line
+	1250 6950 1950 6950
+$Comp
+L power:+5V #PWR038
+U 1 1 5ED7D826
+P 1950 6900
+F 0 "#PWR038" H 1950 6750 50  0001 C CNN
+F 1 "+5V" H 1965 7073 50  0000 C CNN
+F 2 "" H 1950 6900 50  0001 C CNN
+F 3 "" H 1950 6900 50  0001 C CNN
+	1    1950 6900
+	1    0    0    -1  
+$EndComp
+Text HLabel 7500 2700 0    50   Input ~ 0
+ADC0
+Text HLabel 7500 2800 0    50   Input ~ 0
+ADC1
+Wire Wire Line
+	2500 6950 2500 6900
+Wire Wire Line
+	1250 6550 2000 6550
+NoConn ~ 7500 3700
+NoConn ~ 7500 3800
+NoConn ~ 7500 3900
+NoConn ~ 7500 4100
+NoConn ~ 7500 4200
+NoConn ~ 7500 1800
+NoConn ~ 1750 7150
+NoConn ~ 1750 7050
+NoConn ~ 1750 6850
+Text HLabel 9700 1800 2    50   Input ~ 0
+Vref
+Wire Wire Line
+	9700 1800 9550 1800
+$Comp
+L Device:C C19
+U 1 1 5EEC80F6
+P 9550 2000
+F 0 "C19" H 9665 2046 50  0000 L CNN
+F 1 "100n" H 9665 1955 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 9588 1850 50  0001 C CNN
+F 3 "~" H 9550 2000 50  0001 C CNN
+	1    9550 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR062
+U 1 1 5EEC80FC
+P 9550 2150
+F 0 "#PWR062" H 9550 1900 50  0001 C CNN
+F 1 "GND" H 9555 1977 50  0000 C CNN
+F 2 "" H 9550 2150 50  0001 C CNN
+F 3 "" H 9550 2150 50  0001 C CNN
+	1    9550 2150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9550 1850 9550 1800
+Connection ~ 9550 1800
+Wire Wire Line
+	9550 1800 9200 1800
+$Comp
+L Device:LED D5
+U 1 1 5EED8A11
+P 6100 1600
+F 0 "D5" H 6093 1816 50  0000 C CNN
+F 1 "LED" H 6093 1725 50  0000 C CNN
+F 2 "LED_SMD:LED_0603_1608Metric" H 6100 1600 50  0001 C CNN
+F 3 "~" H 6100 1600 50  0001 C CNN
+	1    6100 1600
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:LED D6
+U 1 1 5EEDA40A
+P 6100 2000
+F 0 "D6" H 6093 2216 50  0000 C CNN
+F 1 "LED" H 6093 2125 50  0000 C CNN
+F 2 "LED_SMD:LED_0603_1608Metric" H 6100 2000 50  0001 C CNN
+F 3 "~" H 6100 2000 50  0001 C CNN
+	1    6100 2000
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:R R22
+U 1 1 5EEDC07F
+P 5700 1600
+F 0 "R22" V 5493 1600 50  0000 C CNN
+F 1 "R" V 5584 1600 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 5630 1600 50  0001 C CNN
+F 3 "~" H 5700 1600 50  0001 C CNN
+	1    5700 1600
+	0    -1   1    0   
+$EndComp
+$Comp
+L Device:R R23
+U 1 1 5EEDC80F
+P 5700 2000
+F 0 "R23" V 5493 2000 50  0000 C CNN
+F 1 "R" V 5584 2000 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 5630 2000 50  0001 C CNN
+F 3 "~" H 5700 2000 50  0001 C CNN
+	1    5700 2000
+	0    -1   1    0   
+$EndComp
+Wire Wire Line
+	5850 1600 5950 1600
+Wire Wire Line
+	5850 2000 5950 2000
+Wire Wire Line
+	8000 1900 6500 1900
+Wire Wire Line
+	6500 1900 6500 1600
+Wire Wire Line
+	6500 1600 6250 1600
+Wire Wire Line
+	8000 2000 6250 2000
+Wire Wire Line
+	5550 2000 5500 2000
+Wire Wire Line
+	5500 2000 5500 1600
+Wire Wire Line
+	5550 1600 5500 1600
+Connection ~ 5500 1600
+$Comp
+L power:+3V3 #PWR063
+U 1 1 5EEF3C31
+P 5500 1150
+F 0 "#PWR063" H 5500 1000 50  0001 C CNN
+F 1 "+3V3" H 5515 1323 50  0000 C CNN
+F 2 "" H 5500 1150 50  0001 C CNN
+F 3 "" H 5500 1150 50  0001 C CNN
+	1    5500 1150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5500 1150 5500 1600
 $EndSCHEMATC

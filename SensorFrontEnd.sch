@@ -4,12 +4,12 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 4 4
+Sheet 3 7
 Title "Capacitive Water Level sensor frontend"
 Date ""
 Rev "1"
-Comp ""
-Comment1 "NE555 based sensor frontend"
+Comp "RWTH Aachen University, Physik 3B"
+Comment1 ""
 Comment2 "convert capacity into frequency"
 Comment3 ""
 Comment4 ""
@@ -97,9 +97,9 @@ Wire Wire Line
 Wire Wire Line
 	6000 3900 6000 4050
 Wire Wire Line
-	6000 4050 6350 4050
+	6000 4050 6250 4050
 Wire Wire Line
-	6350 4250 6000 4250
+	6350 4250 6200 4250
 Wire Wire Line
 	6000 4250 6000 4450
 Wire Wire Line
@@ -217,4 +217,31 @@ F 3 "~" H 6450 4250 50  0001 C CNN
 	1    6450 4250
 	0    1    1    0   
 $EndComp
+$Comp
+L Connector:Screw_Terminal_01x02 J?
+U 1 1 5EEFED68
+P 6500 4650
+AR Path="/5EEFED68" Ref="J?"  Part="1" 
+AR Path="/5E78E950/5EEFED68" Ref="J13"  Part="1" 
+F 0 "J13" H 6579 4642 50  0000 L CNN
+F 1 "Screw_Terminal_01x02" H 6579 4551 50  0000 L CNN
+F 2 "TerminalBlock_MetzConnect:TerminalBlock_MetzConnect_Type055_RT01502HDWU_1x02_P5.00mm_Horizontal" H 6500 4650 50  0001 C CNN
+F 3 "~" H 6500 4650 50  0001 C CNN
+	1    6500 4650
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	6300 4550 6250 4550
+Wire Wire Line
+	6250 4550 6250 4050
+Connection ~ 6250 4050
+Wire Wire Line
+	6250 4050 6350 4050
+Wire Wire Line
+	6300 4650 6200 4650
+Wire Wire Line
+	6200 4650 6200 4250
+Connection ~ 6200 4250
+Wire Wire Line
+	6200 4250 6000 4250
 $EndSCHEMATC
