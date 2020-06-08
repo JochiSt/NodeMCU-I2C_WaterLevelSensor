@@ -514,7 +514,7 @@ Wire Wire Line
 Wire Wire Line
 	1800 6100 1800 6150
 $Sheet
-S 2350 2300 1050 1400
+S 2350 2300 1050 1950
 U 5E788D14
 F0 "I2C Water Sensor" 50
 F1 "I2C_WaterSensor.sch" 50
@@ -524,6 +524,7 @@ F4 "FREQIN" I R 3400 2450 50
 F5 "ADC0" I R 3400 2850 50 
 F6 "ADC1" I R 3400 3250 50 
 F7 "Vref" I R 3400 3550 50 
+F8 "ADC2" I R 3400 4000 50 
 $EndSheet
 Wire Wire Line
 	4600 2850 4700 2850
@@ -674,4 +675,54 @@ Wire Wire Line
 Wire Wire Line
 	2350 6000 2350 6050
 Connection ~ 1800 6000
+$Comp
+L Device:R R?
+U 1 1 5EDECD80
+P 4700 4200
+AR Path="/5E788D14/5EDECD80" Ref="R?"  Part="1" 
+AR Path="/5EDECD80" Ref="R24"  Part="1" 
+F 0 "R24" H 4770 4246 50  0000 L CNN
+F 1 "10k" H 4770 4155 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 4630 4200 50  0001 C CNN
+F 3 "~" H 4700 4200 50  0001 C CNN
+	1    4700 4200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4700 4050 4700 4000
+Wire Wire Line
+	4700 4350 4700 4400
+$Comp
+L power:GND #PWR?
+U 1 1 5EDEE714
+P 4700 4400
+AR Path="/5EE42DF1/5EDEE714" Ref="#PWR?"  Part="1" 
+AR Path="/5EE46703/5EDEE714" Ref="#PWR?"  Part="1" 
+AR Path="/5EDEE714" Ref="#PWR0107"  Part="1" 
+F 0 "#PWR0107" H 4700 4150 50  0001 C CNN
+F 1 "GND" H 4705 4227 50  0000 C CNN
+F 2 "" H 4700 4400 50  0001 C CNN
+F 3 "" H 4700 4400 50  0001 C CNN
+	1    4700 4400
+	1    0    0    -1  
+$EndComp
+Connection ~ 4700 4000
+Wire Wire Line
+	4700 4000 4700 3950
+Wire Wire Line
+	3400 4000 4700 4000
+$Comp
+L Sensor_Optical:BPW34 D7
+U 1 1 5EDE69A2
+P 4700 3850
+F 0 "D7" V 4604 4008 50  0000 L CNN
+F 1 "BPW34" V 4695 4008 50  0000 L CNN
+F 2 "OptoDevice:Osram_DIL2_4.3x4.65mm_P5.08mm" H 4700 4025 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/81521/bpw34.pdf" H 4650 3850 50  0001 C CNN
+	1    4700 3850
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4700 3650 4700 3550
+Connection ~ 4700 3550
 $EndSCHEMATC
