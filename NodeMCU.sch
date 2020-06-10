@@ -4,7 +4,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 3 7
+Sheet 2 7
 Title "NodeMCU"
 Date ""
 Rev "1"
@@ -66,8 +66,6 @@ Wire Wire Line
 	2750 3350 2250 3350
 Wire Wire Line
 	2750 3450 2250 3450
-Wire Wire Line
-	4650 2050 4150 2050
 Wire Wire Line
 	4650 2150 4150 2150
 Wire Wire Line
@@ -360,4 +358,32 @@ Text Label 4450 5000 0    50   ~ 0
 SD3
 Text Label 4450 5300 0    50   ~ 0
 A0
+$Comp
+L Device:R R25
+U 1 1 5EE06FEF
+P 4850 2050
+F 0 "R25" V 5057 2050 50  0000 C CNN
+F 1 "0R" V 4966 2050 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 4780 2050 50  0001 C CNN
+F 3 "~" H 4850 2050 50  0001 C CNN
+	1    4850 2050
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4150 2050 4700 2050
+$Comp
+L power:+5V #PWR071
+U 1 1 5EE08F07
+P 5100 1950
+F 0 "#PWR071" H 5100 1800 50  0001 C CNN
+F 1 "+5V" H 5115 2123 50  0000 C CNN
+F 2 "" H 5100 1950 50  0001 C CNN
+F 3 "" H 5100 1950 50  0001 C CNN
+	1    5100 1950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5000 2050 5100 2050
+Wire Wire Line
+	5100 2050 5100 1950
 $EndSCHEMATC

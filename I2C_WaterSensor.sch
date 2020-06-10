@@ -527,11 +527,7 @@ Wire Wire Line
 	2500 6950 2500 6900
 Wire Wire Line
 	1250 6550 2000 6550
-NoConn ~ 7500 3700
-NoConn ~ 7500 3800
 NoConn ~ 7500 3900
-NoConn ~ 7500 4100
-NoConn ~ 7500 4200
 NoConn ~ 7500 1800
 NoConn ~ 1750 7150
 NoConn ~ 1750 7050
@@ -647,4 +643,12 @@ Text HLabel 7500 2900 0    50   Input ~ 0
 ADC2
 Text Notes 5750 1200 0    50   ~ 0
 R_LED = (3.3 - 1.5) / 2mA < 2k2
+Text HLabel 7500 4100 0    50   Input ~ 0
+DigOut1
+Text HLabel 7500 4200 0    50   Input ~ 0
+DigOut2
+Text HLabel 7500 3700 0    50   Input ~ 0
+DigIn1
+Text HLabel 7500 3800 0    50   Input ~ 0
+DigIn2
 $EndSCHEMATC
