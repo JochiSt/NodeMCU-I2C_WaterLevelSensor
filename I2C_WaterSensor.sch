@@ -428,8 +428,6 @@ Text Label 7550 2800 0    50   ~ 0
 ADC1
 Text Label 7550 2900 0    50   ~ 0
 ADC2
-Text Label 7550 3000 0    50   ~ 0
-ADC3
 $Comp
 L Connector_Generic:Conn_01x07 J8
 U 1 1 5ED68C1D
@@ -527,8 +525,6 @@ Wire Wire Line
 	2500 6950 2500 6900
 Wire Wire Line
 	1250 6550 2000 6550
-NoConn ~ 7500 3900
-NoConn ~ 7500 1800
 NoConn ~ 1750 7150
 NoConn ~ 1750 7050
 NoConn ~ 1750 6850
@@ -651,4 +647,141 @@ Text HLabel 7500 3700 0    50   Input ~ 0
 DigIn1
 Text HLabel 7500 3800 0    50   Input ~ 0
 DigIn2
+Text Notes 2300 6400 0    50   ~ 0
+Voltage divider should not be necessary, \nsince SDS011 output is specified to \nhave only 3V3 output
+$Comp
+L power:+3V3 #PWR079
+U 1 1 5EEBA048
+P 3000 800
+AR Path="/5E788D14/5EEBA048" Ref="#PWR079"  Part="1" 
+AR Path="/5EEBA048" Ref="#PWR?"  Part="1" 
+F 0 "#PWR079" H 3000 650 50  0001 C CNN
+F 1 "+3V3" H 3015 973 50  0000 C CNN
+F 2 "" H 3000 800 50  0001 C CNN
+F 3 "" H 3000 800 50  0001 C CNN
+	1    3000 800 
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR080
+U 1 1 5EEBA04E
+P 3000 1200
+AR Path="/5E788D14/5EEBA04E" Ref="#PWR080"  Part="1" 
+AR Path="/5EEBA04E" Ref="#PWR?"  Part="1" 
+F 0 "#PWR080" H 3000 950 50  0001 C CNN
+F 1 "GND" H 3005 1027 50  0000 C CNN
+F 2 "" H 3000 1200 50  0001 C CNN
+F 3 "" H 3000 1200 50  0001 C CNN
+	1    3000 1200
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Jumper:SolderJumper_3_Bridged12 JP?
+U 1 1 5EEBA054
+P 3000 1000
+AR Path="/5EEBA054" Ref="JP?"  Part="1" 
+AR Path="/5E788D14/5EEBA054" Ref="JP2"  Part="1" 
+F 0 "JP2" V 3000 1068 50  0000 L CNN
+F 1 "SolderJumper_3_Bridged12" V 2955 1068 50  0001 L CNN
+F 2 "Jumper:SolderJumper-3_P1.3mm_Bridged12_Pad1.0x1.5mm" H 3000 1000 50  0001 C CNN
+F 3 "~" H 3000 1000 50  0001 C CNN
+	1    3000 1000
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3650 1000 3150 1000
+$Comp
+L power:+3V3 #PWR081
+U 1 1 5EEBCEFD
+P 3300 1250
+AR Path="/5E788D14/5EEBCEFD" Ref="#PWR081"  Part="1" 
+AR Path="/5EEBCEFD" Ref="#PWR?"  Part="1" 
+F 0 "#PWR081" H 3300 1100 50  0001 C CNN
+F 1 "+3V3" H 3315 1423 50  0000 C CNN
+F 2 "" H 3300 1250 50  0001 C CNN
+F 3 "" H 3300 1250 50  0001 C CNN
+	1    3300 1250
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR082
+U 1 1 5EEBCF03
+P 3300 1650
+AR Path="/5E788D14/5EEBCF03" Ref="#PWR082"  Part="1" 
+AR Path="/5EEBCF03" Ref="#PWR?"  Part="1" 
+F 0 "#PWR082" H 3300 1400 50  0001 C CNN
+F 1 "GND" H 3305 1477 50  0000 C CNN
+F 2 "" H 3300 1650 50  0001 C CNN
+F 3 "" H 3300 1650 50  0001 C CNN
+	1    3300 1650
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Jumper:SolderJumper_3_Bridged12 JP?
+U 1 1 5EEBCF09
+P 3300 1450
+AR Path="/5EEBCF09" Ref="JP?"  Part="1" 
+AR Path="/5E788D14/5EEBCF09" Ref="JP3"  Part="1" 
+F 0 "JP3" V 3300 1518 50  0000 L CNN
+F 1 "SolderJumper_3_Bridged12" V 3255 1518 50  0001 L CNN
+F 2 "Jumper:SolderJumper-3_P1.3mm_Bridged12_Pad1.0x1.5mm" H 3300 1450 50  0001 C CNN
+F 3 "~" H 3300 1450 50  0001 C CNN
+	1    3300 1450
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3950 1450 3450 1450
+Text Label 3250 1000 0    50   ~ 0
+ADDR0
+Text Label 3500 1450 0    50   ~ 0
+ADDR1
+Text Label 7550 1800 0    50   ~ 0
+ADDR0
+Text Label 7550 3000 0    50   ~ 0
+ADDR1
+Text Label 7550 3900 0    50   ~ 0
+ADDR2
+$Comp
+L power:+3V3 #PWR083
+U 1 1 5EEC110B
+P 3550 1700
+AR Path="/5E788D14/5EEC110B" Ref="#PWR083"  Part="1" 
+AR Path="/5EEC110B" Ref="#PWR?"  Part="1" 
+F 0 "#PWR083" H 3550 1550 50  0001 C CNN
+F 1 "+3V3" H 3565 1873 50  0000 C CNN
+F 2 "" H 3550 1700 50  0001 C CNN
+F 3 "" H 3550 1700 50  0001 C CNN
+	1    3550 1700
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR084
+U 1 1 5EEC1111
+P 3550 2100
+AR Path="/5E788D14/5EEC1111" Ref="#PWR084"  Part="1" 
+AR Path="/5EEC1111" Ref="#PWR?"  Part="1" 
+F 0 "#PWR084" H 3550 1850 50  0001 C CNN
+F 1 "GND" H 3555 1927 50  0000 C CNN
+F 2 "" H 3550 2100 50  0001 C CNN
+F 3 "" H 3550 2100 50  0001 C CNN
+	1    3550 2100
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Jumper:SolderJumper_3_Bridged12 JP?
+U 1 1 5EEC1117
+P 3550 1900
+AR Path="/5EEC1117" Ref="JP?"  Part="1" 
+AR Path="/5E788D14/5EEC1117" Ref="JP4"  Part="1" 
+F 0 "JP4" V 3550 1968 50  0000 L CNN
+F 1 "SolderJumper_3_Bridged12" V 3505 1968 50  0001 L CNN
+F 2 "Jumper:SolderJumper-3_P1.3mm_Bridged12_Pad1.0x1.5mm" H 3550 1900 50  0001 C CNN
+F 3 "~" H 3550 1900 50  0001 C CNN
+	1    3550 1900
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4200 1900 3700 1900
+Text Label 3750 1900 0    50   ~ 0
+ADDR2
 $EndSCHEMATC
