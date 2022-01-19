@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:NodeMCU_WeatherStation-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -99,8 +98,6 @@ Wire Wire Line
 Wire Wire Line
 	6000 4050 6250 4050
 Wire Wire Line
-	6350 4250 6200 4250
-Wire Wire Line
 	6000 4250 6000 4450
 Wire Wire Line
 	6000 4050 5150 4050
@@ -196,28 +193,6 @@ F 3 "" H 6000 2750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole_Pad H1
-U 1 1 5E7B13BD
-P 6450 4050
-F 0 "H1" V 6404 4200 50  0000 L CNN
-F 1 "MountingHole_Pad" V 6495 4200 50  0000 L CNN
-F 2 "MountingHole:MountingHole_4.3mm_M4_Pad_Via" H 6450 4050 50  0001 C CNN
-F 3 "~" H 6450 4050 50  0001 C CNN
-	1    6450 4050
-	0    1    1    0   
-$EndComp
-$Comp
-L Mechanical:MountingHole_Pad H2
-U 1 1 5E7B1E5A
-P 6450 4250
-F 0 "H2" V 6404 4400 50  0000 L CNN
-F 1 "MountingHole_Pad" V 6495 4400 50  0000 L CNN
-F 2 "MountingHole:MountingHole_4.3mm_M4_Pad_Via" H 6450 4250 50  0001 C CNN
-F 3 "~" H 6450 4250 50  0001 C CNN
-	1    6450 4250
-	0    1    1    0   
-$EndComp
-$Comp
 L Connector:Screw_Terminal_01x02 J?
 U 1 1 5EEFED68
 P 6500 4650
@@ -234,14 +209,10 @@ Wire Wire Line
 	6300 4550 6250 4550
 Wire Wire Line
 	6250 4550 6250 4050
-Connection ~ 6250 4050
-Wire Wire Line
-	6250 4050 6350 4050
 Wire Wire Line
 	6300 4650 6200 4650
 Wire Wire Line
 	6200 4650 6200 4250
-Connection ~ 6200 4250
 Wire Wire Line
 	6200 4250 6000 4250
 $EndSCHEMATC
